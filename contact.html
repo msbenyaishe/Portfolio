@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact – Portfolio</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --primary: #4fc3f7;
+    --primary-dark: #039be5;
+    --accent: #ff6b6b;
+    --bg: #f5f7fb;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --card-bg: #fff;
+    --shadow: rgba(0,0,0,0.08);
+    --header-height: 70px;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+  body { background: var(--bg); color: var(--text); display:flex; flex-direction:column; min-height:100vh; }
+
+  /* HEADER */
+  header {
+    position: sticky;
+    top:0;
+    width:100%;
+    height: var(--header-height);
+    background:#fff;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 2px 8px var(--shadow);
+    z-index:100;
+  }
+  header h1 {
+    font-size: 1.5rem;
+    font-weight:700;
+  }
+  nav a {
+    margin-left: 2rem;
+    text-decoration:none;
+    color: var(--text);
+    font-weight:600;
+    transition:0.2s;
+  }
+  nav a:hover { color: var(--primary); }
+
+  /* PAGE TITLE */
+  .intro {
+    max-width:1200px;
+    margin:2rem auto;
+    padding:0 2rem;
+  }
+  .intro h2 {
+    font-size:2rem;
+    font-weight:700;
+    margin-bottom:0.5rem;
+  }
+  .intro p {
+    color: var(--muted);
+    font-size:1.05rem;
+  }
+
+  /* GRID (same as portfolio layout) */
+  main {
+    max-width: 1200px;
+    padding:2rem;
+    margin:auto;
+  }
+  .contact-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap:2rem;
+  }
+
+  /* CARD (same look as portfolio cards) */
+  .contact-card {
+    background: var(--card-bg);
+    border-radius:16px;
+    padding:2rem;
+    box-shadow: 0 10px 20px var(--shadow);
+    transition:0.3s ease;
+  }
+  .contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px var(--shadow);
+  }
+
+  /* SOCIAL ICON ROW */
+  .social-row {
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+  }
+
+  .social-link {
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+    padding:0.7rem 1rem;
+    border-radius:12px;
+    transition:0.25s;
+  }
+  .social-link:hover {
+    background:#eef8ff;
+    color:var(--primary-dark);
+  }
+
+  .social-link img {
+    width:32px;
+    height:32px;
+  }
+
+  /* FORM */
+  form {
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+  }
+
+  input, textarea {
+    width:100%;
+    padding:0.9rem;
+    border-radius:10px;
+    border:1px solid #d0d7e2;
+    font-size:1rem;
+    transition:0.2s;
+    background:#fff;
+  }
+
+  input:focus, textarea:focus {
+    border-color: var(--primary);
+    outline:none;
+    background:#fff;
+  }
+
+  textarea {
+    resize:none;
+    min-height:150px;
+  }
+
+  button {
+    background: var(--primary);
+    border:none;
+    padding:0.9rem;
+    font-size:1rem;
+    font-weight:600;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.25s;
+    color:#fff;
+    width: fit-content;
+    padding:0.9rem 1.6rem;
+  }
+  button:hover {
+    background: var(--primary-dark);
+    transform:translateY(-2px);
+  }
+
+  /* FOOTER (same as portfolio) */
+  footer {
+    margin-top:auto;
+    text-align:center;
+    padding:3rem 2rem;
+    color:var(--muted);
+    font-size:0.9rem;
+    border-top:1px solid #e0e0e0;
+    background:#fff;
+  }
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Mohamed Said</h1>
+  <nav>
+    <a href="index.html">Portfolio</a>
+    <a href="contact.html" style="color:var(--primary)">Contact</a>
+  </nav>
+</header>
+
+<section class="intro">
+  <h2>Contact Me</h2>
+  <p>Reach out through my social media or send me a message directly.</p>
+</section>
+
+<main>
+  <div class="contact-grid">
+
+    <!-- SOCIAL MEDIA CARD -->
+    <div class="contact-card">
+      <h3 style="margin-bottom:1rem;">Social Media</h3>
+      <div class="social-row">
+        
+        <a href="https://x.com/msbenyaishe" class="social-link" target="_blank">
+          <img src="images/x.png">
+          X (Twitter)
+        </a>
+
+        <a href="https://github.com/msbenyaishe/" class="social-link" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png">
+          GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/mohamed-said-benyaishe-462860321/" class="social-link" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png">
+          LinkedIn
+        </a>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  © 2025 Your Name — All rights reserved.
+</footer>
+
+</body>
+</html>
