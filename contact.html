@@ -23,7 +23,6 @@
   * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
   body { background: var(--bg); color: var(--text); display:flex; flex-direction:column; min-height:100vh; }
 
-  /* HEADER */
   header {
     position: sticky;
     top:0;
@@ -50,7 +49,6 @@
   }
   nav a:hover { color: var(--primary); }
 
-  /* PAGE TITLE */
   .intro {
     max-width:1200px;
     margin:2rem auto;
@@ -66,7 +64,6 @@
     font-size:1.05rem;
   }
 
-  /* GRID (same as portfolio layout) */
   main {
     max-width: 1200px;
     padding:2rem;
@@ -78,7 +75,6 @@
     gap:2rem;
   }
 
-  /* CARD (same look as portfolio cards) */
   .contact-card {
     background: var(--card-bg);
     border-radius:16px;
@@ -91,7 +87,6 @@
     box-shadow: 0 20px 30px var(--shadow);
   }
 
-  /* SOCIAL ICON ROW */
   .social-row {
     display:flex;
     flex-direction:column;
@@ -119,7 +114,6 @@
     height:32px;
   }
 
-  /* FORM */
   form {
     display:flex;
     flex-direction:column;
@@ -165,11 +159,10 @@
     transform:translateY(-2px);
   }
 
-  /* FOOTER (same as portfolio) */
   footer {
     margin-top:auto;
     text-align:center;
-    padding:3rem 2rem;
+    padding:1.5rem 2rem; /* FIXED SIZE */
     color:var(--muted);
     font-size:0.9rem;
     border-top:1px solid #e0e0e0;
@@ -210,7 +203,6 @@
 <main>
   <div class="contact-grid">
 
-    <!-- SOCIAL MEDIA CARD -->
     <div class="contact-card">
       <h3 style="margin-bottom:1rem;">Social Media</h3>
       <div class="social-row">

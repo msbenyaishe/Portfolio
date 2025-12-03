@@ -37,7 +37,6 @@
   }
   nav a:hover { color: var(--primary); }
 
-  /* INTRO SECTION */
   .intro {
     max-width:1200px;
     margin:2rem auto;
@@ -54,7 +53,6 @@
     font-size:1.1rem;
   }
 
-  /* MAIN GRID */
   main {
     max-width: 1200px;
     margin:auto;
@@ -66,7 +64,6 @@
     gap:2rem;
   }
 
-  /* CARD */
   .portfolio-card {
     background: var(--card-bg);
     border-radius: 16px;
@@ -82,7 +79,6 @@
     box-shadow: 0 20px 30px var(--shadow);
   }
 
-  /* NEW: IMAGES INSIDE CARD */
   .portfolio-card-images {
     display: flex;
     gap: 0.7rem;
@@ -129,30 +125,29 @@
     transform: translateY(-2px);
   }
 
-  /* FOOTER */
   footer {
     text-align: center;
-    padding: 1.5rem 2rem;  /* reduced from 3rem to 1.5rem */
+    padding: 1.5rem 2rem;
     color: var(--muted);
     font-size: 0.9rem;
     border-top: 1px solid #e0e0e0;
-    margin-top: auto; /* keeps it at the bottom */
+    margin-top: auto;
     background: #fff;
 }
 
   html, body {
-      height: 100%;         /* ensures body fills viewport */
+      height: 100%;
       margin: 0;
   }
 
   body {
-      display: flex;         /* flex column layout */
+      display: flex;
       flex-direction: column;
       min-height: 100%;
   }
 
   header {
-      flex-shrink: 0;        /* header never shrinks */
+      flex-shrink: 0;
       height: var(--header-height);
       min-height: var(--header-height);
       display: flex;
@@ -164,8 +159,8 @@
   }
 
   main {
-      flex: 1 0 auto;        /* main grows to push footer down */
-      width: 100%;           /* ensures full width */
+      flex: 1 0 auto;
+      width: 100%;
       max-width: 1200px;
       margin: 1.5rem auto 0;
       padding: 0 2rem 2rem;
@@ -173,27 +168,14 @@
   }
 
   footer {
-      flex-shrink: 0;        /* prevents shrinking */
-      margin-top: auto;       /* pushes footer to bottom */
+      flex-shrink: 0;
+      margin-top: auto;
       text-align: center;
       padding: 1.5rem 2rem;
       color: var(--muted);
       font-size: 0.9rem;
       border-top: 1px solid #e0e0e0;
       background: #fff;
-  }
-
-  @media(max-width:900px){
-    header { padding: 0 1rem; }
-    nav a { margin-left: 1rem; font-size:0.95rem; }
-    .intro h2 { font-size:1.75rem; }
-    .intro p { font-size:1rem; }
-  }
-
-  @media(max-width:600px){
-    main { padding:1rem; }
-    .portfolio-card-content { padding:1.5rem; }
-    .portfolio-card h3 { font-size:1.25rem; }
   }
 </style>
 </head>
@@ -214,7 +196,6 @@
     I am a 2nd-year developer at <strong>ISMONTIC Tangier</strong>.<br>
     Developing my skills in creating modern, interactive web applications and interfaces. Explore my work below.
   </p>
-
 </section>
 
 <main id="portfolio">
@@ -261,7 +242,7 @@ works.forEach(work => {
 
       <h3>${work.title}</h3>
       <p>${work.description}</p>
-      <a href="${work.link}" target="_blank">View Workshops</a>
+      <a href="${work.link}">View Workshops</a>
 
     </div>
   `;
