@@ -178,6 +178,20 @@
       background: #fff;
   }
 
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+
   @media(max-width:900px){
     header { padding: 0 1rem; }
     nav a { margin-left: 1rem; font-size:0.95rem; }
@@ -196,7 +210,10 @@
 <body>
 
 <header>
-  <h1>Mohamed Said</h1>
+    <div class="profile">
+      <img src="images/profile.jpg" alt="Profile">
+      <h1>Mohamed Said</h1>
+  </div>
   <nav>
     <a href="#portfolio">Portfolio</a>
     <a href="contact.html">Contact</a>
