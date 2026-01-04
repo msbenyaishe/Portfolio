@@ -1,0 +1,8 @@
+<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue square with rounded corners -->
+  <rect x="0" y="0" width="120" height="120" rx="28" ry="28" fill="#1f6feb"/>
+  
+  <!-- QA text in white, perfectly centered -->
+  <text x="60" y="60" font-family="'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif" font-size="52" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="central" letter-spacing="-2">QA</text>
+</svg>
+
