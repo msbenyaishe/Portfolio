@@ -6,192 +6,192 @@
 <title>My Projects</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-:root {
-  --primary: #4fc3f7;
-  --primary-dark: #039be5;
-  --accent: #ff6b6b;
-  --bg: #f5f7fb;
-  --text: #1f2937;
-  --muted: #6b7280;
-  --card-bg: #fff;
-  --shadow: rgba(0,0,0,0.08);
-  --header-height: 70px;
-}
-
-* { box-sizing:border-box; margin:0; padding:0; font-family:'Poppins', sans-serif; }
-
-
-body { 
-  background: var(--bg); 
-  color: var(--text); 
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  text-align: left; 
-}
-
-
-header {
-  flex-shrink: 0;
-  height: var(--header-height);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  background: #fff;
-  box-shadow: 0 2px 8px var(--shadow);
-}
-
-header h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-nav a {
-  margin-left: 2rem;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  transition: color 0.2s;
-}
-
-nav a:hover { color: var(--primary); }
-
-.intro {
-    max-width:1200px;
-    margin:2rem auto;
-    padding:0 2rem;
-    text-align:left;
+  :root {
+    --primary: #4fc3f7;
+    --primary-dark: #039be5;
+    --accent: #ff6b6b;
+    --bg: #f5f7fb;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --card-bg: #fff;
+    --shadow: rgba(0,0,0,0.08);
+    --header-height: 70px;
   }
-.intro h2 {
-    font-size:2rem;
+
+  * { box-sizing:border-box; margin:0; padding:0; font-family:'Poppins', sans-serif; }
+
+
+  body { 
+    background: var(--bg); 
+    color: var(--text); 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: left; 
+  }
+
+
+  header {
+    flex-shrink: 0;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background: #fff;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+
+  header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+  }
+
+  nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--primary); }
+
+  .intro {
+      max-width:1200px;
+      margin:2rem auto;
+      padding:0 2rem;
+      text-align:left;
+    }
+  .intro h2 {
+      font-size:2rem;
+      font-weight:700;
+      margin-bottom:0.5rem;
+    }
+    .intro p {
+      color: var(--muted);
+      font-size:1.1rem;
+    }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .portfolio-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap:2rem;
+  }
+
+  .portfolio-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 20px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display:flex;
+    flex-direction: column;
+  }
+  .portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px var(--shadow);
+  }
+
+  .portfolio-card-images {
+    display: flex;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  .portfolio-card-images img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 8px;
+    padding: 6px;
+  }
+
+  .portfolio-card-content {
+    padding:2rem;
+    display:flex;
+    flex-direction:column;
+    flex-grow:1;
+  }
+
+  .portfolio-card h3 {
+    font-size:1.4rem;
     font-weight:700;
     margin-bottom:0.5rem;
   }
-  .intro p {
+  .portfolio-card p {
     color: var(--muted);
-    font-size:1.1rem;
+    margin-bottom:1rem;
+    flex-grow:1;
+  }
+  .portfolio-card a {
+    text-decoration:none;
+    background: var(--primary);
+    color:#fff;
+    padding:0.6rem 1.2rem;
+    border-radius:10px;
+    font-weight:600;
+    align-self:flex-start;
+  }
+  .portfolio-card a:hover {
+    background: var(--primary-dark);
   }
 
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  width: 100%;
-  flex-grow: 1;
-}
-
-.portfolio-grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap:2rem;
-}
-
-.portfolio-card {
-  background: var(--card-bg);
-  border-radius: 16px;
-  box-shadow: 0 10px 20px var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display:flex;
-  flex-direction: column;
-}
-.portfolio-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 30px var(--shadow);
-}
-
-.portfolio-card-images {
-  display: flex;
-  gap: 0.7rem;
-  margin-bottom: 1rem;
-}
-.portfolio-card-images img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  border-radius: 8px;
-  padding: 6px;
-}
-
-.portfolio-card-content {
-  padding:2rem;
-  display:flex;
-  flex-direction:column;
-  flex-grow:1;
-}
-
-.portfolio-card h3 {
-  font-size:1.4rem;
-  font-weight:700;
-  margin-bottom:0.5rem;
-}
-.portfolio-card p {
-  color: var(--muted);
-  margin-bottom:1rem;
-  flex-grow:1;
-}
-.portfolio-card a {
-  text-decoration:none;
-  background: var(--primary);
-  color:#fff;
-  padding:0.6rem 1.2rem;
-  border-radius:10px;
-  font-weight:600;
-  align-self:flex-start;
-}
-.portfolio-card a:hover {
-  background: var(--primary-dark);
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.profile img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-footer {
-    text-align: center;
-    padding: 1.5rem 2rem;
-    color: var(--muted);
-    font-size: 0.9rem;
-    border-top: 1px solid #e0e0e0;
-    background: #fff;
-    margin-top: auto;
-    flex-shrink: 0;
-}
-
-@media(max-width:600px){
-  header {
-    flex-direction: column;
-    height: auto;
-    min-height: auto;
-    padding: 1rem;
-    align-items: flex-start;
-  }
   .profile {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  nav {
-    width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 12px;
   }
-  nav a {
-    margin-left: 0;
-    margin-right: 1.5rem;
+  .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
   }
-  nav a:last-child {
-    margin-right: 0;
+
+  footer {
+      text-align: center;
+      padding: 1.5rem 2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid #e0e0e0;
+      background: #fff;
+      margin-top: auto;
+      flex-shrink: 0;
   }
+
+  @media(max-width:600px){
+    header {
+      flex-direction: column;
+      height: auto;
+      min-height: auto;
+      padding: 1rem;
+      align-items: flex-start;
+    }
+    .profile {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      margin-left: 0;
+      margin-right: 1.5rem;
+    }
+    nav a:last-child {
+      margin-right: 0;
+    }
 }
 
 </style>
