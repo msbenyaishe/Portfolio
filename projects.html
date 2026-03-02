@@ -168,98 +168,31 @@
       flex-shrink: 0;
   }
 
-  /* ===== Hamburger Button ===== */
-  .hamburger {
-    display: none;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 8px;
-    z-index: 1001;
-    flex-shrink: 0;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: var(--text);
-    margin: 5px 0;
-    border-radius: 3px;
-    transition: 0.3s;
-  }
-
-  /* ===== Overlay ===== */
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    z-index: 999;
-  }
-  .overlay.active { display: block; }
-
-  /* ===== Desktop: nav links on the right ===== */
-  nav {
-    display: flex;
-    align-items: center;
-  }
-
-  nav a {
-    margin-left: 2rem;
-    text-decoration: none;
-    color: var(--text);
-    font-weight: 600;
-    transition: color 0.2s;
-  }
-
-  nav a:hover { color: var(--primary); }
-
-  /* ===== Mobile: hamburger visible, nav becomes slide-in ===== */
-  @media (max-width: 600px) {
-    .hamburger {
-      display: block;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 220px;
-      height: 100vh;
-      background: #fff;
+  @media(max-width:600px){
+    header {
       flex-direction: column;
-      align-items: center;
+      height: auto;
+      min-height: auto;
+      padding: 1rem;
+      align-items: flex-start;
+    }
+    .profile {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    nav {
+      width: 100%;
+      display: flex;
       justify-content: center;
-      box-shadow: -4px 0 20px var(--shadow);
-      transition: right 0.3s ease;
-      z-index: 1000;
-      padding: 2rem;
     }
-
-    nav.active {
-      right: 0;
-    }
-
     nav a {
-      margin: 1rem 0;
-      font-size: 1.1rem;
+      margin-left: 0;
+      margin-right: 1.5rem;
     }
-
-    /* X animation */
-    .header-active .hamburger span:nth-child(1) {
-      transform: rotate(-45deg) translate(-5px, 6px);
+    nav a:last-child {
+      margin-right: 0;
     }
-    .header-active .hamburger span:nth-child(2) {
-      opacity: 0;
-    }
-    .header-active .hamburger span:nth-child(3) {
-      transform: rotate(45deg) translate(-5px, -6px);
-    }
-  }
+}
 
 </style>
 </head>
@@ -271,18 +204,11 @@
     <img src="images/profile.jpg" alt="Profile">
     <h1>Mohamed Said</h1>
   </div>
-  <nav id="navMenu">
+  <nav>
     <a href="index.html">Portfolio</a>
     <a href="projects.html">Projects</a>
-    <a href="resume.html">Resume</a>
     <a href="contact.html">Contact</a>
   </nav>
-  <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <div class="overlay" id="overlay"></div>
 </header>
 
 <section class="intro">
@@ -345,27 +271,6 @@ projects.forEach(project => {
   `;
 
   grid.appendChild(card);
-});
-
-// Mobile Nav Toggle
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('navMenu');
-const overlay = document.getElementById('overlay');
-const header = document.querySelector('header');
-
-function toggleMenu() {
-  navMenu.classList.toggle('active');
-  overlay.classList.toggle('active');
-  header.classList.toggle('header-active');
-  document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-}
-
-hamburger.addEventListener('click', toggleMenu);
-overlay.addEventListener('click', toggleMenu);
-navMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    if (navMenu.classList.contains('active')) toggleMenu();
-  });
 });
 </script>
 
